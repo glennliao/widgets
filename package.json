@@ -1,0 +1,20 @@
+{
+  "name": "widgets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@unocss/nuxt": "^0.58.7",
+    "dayjs": "^1.11.10",
+    "dayjs-nuxt": "^2.1.9",
+    "nuxt": "^3.11.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}
