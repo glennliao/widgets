@@ -35,11 +35,11 @@ const todayWeekNum = Math.floor(today.dayOfYear() / (365 / 50) )
   width: calc(10vw - 4px);
   height: calc(10vw - 4px);
   margin: 2px;
-  border: 1px solid #acacac;
+  border: 1px solid #DFE1E4;
   box-sizing: border-box;
 }
 
 .block.pass{
-  background: #9ba48e;
+  background: #EBEDF0;
 }
 </style>

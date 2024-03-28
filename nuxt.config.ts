@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
-    'dayjs-nuxt'
+    'dayjs-nuxt',
+    "@nuxt/ui"
   ],
   devtools: { enabled: true }
 })

@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.15.0",
     "@unocss/nuxt": "^0.58.7",
     "dayjs": "^1.11.10",
     "dayjs-nuxt": "^2.1.9",
