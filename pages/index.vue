@@ -1,4 +1,10 @@
 <script setup lang="ts">
+
+const host = window.location.href.split("/")[0]
+
+const useHtml = (name:string)=>{
+  return `<iframe src="https://widgets.glenn.pub/widgets/${name}" style="border:1px solid #EAEAEB;width:300px;height:200px;overflow:hidden"/>`
+}
 const widgetList = ref([
   {
     name: 'yearWeek',
@@ -26,7 +32,7 @@ const widgetList = ref([
 
       <div class="flex ">
         <template v-for="item in widgetList" :key="item.name">
-          <UCard class="mt-10" size="small" >
+          <UCard class="mt-10" >
             <template #header>
               <div class="flex justify-between">
                 <h1>{{item.title}}</h1>
@@ -35,9 +41,25 @@ const widgetList = ref([
                 </div>
               </div>
             </template>
+
+            <template #footer>
+              <div class="flex justify-end">
+                <UPopover class="mt-2" :popper="{ placement: 'top-end' }">
+                  <UButton color="white" label="use" trailing-icon="i-heroicons-chevron-down-20-solid" />
+                  <template #panel="{ close }">
+                    <div class="p-4">
+                      <pre>{{ useHtml(item.name) }}</pre>
+                    </div>
+                  </template>
+                </UPopover>
+              </div>
+            </template>
+
             <div class="widget-container">
               <component :is="item.name"/>
             </div>
+
+
           </UCard>
         </template>
       </div>
@@ -49,7 +71,6 @@ const widgetList = ref([
 .page{
   padding: 12px;
   height: 100vh;
-
 }
 
 .bg{
