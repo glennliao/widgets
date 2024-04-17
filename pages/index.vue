@@ -1,7 +1,5 @@
 <script setup lang="ts">
 
-const host = window.location.href.split("/")[0]
-
 const useHtml = (name:string)=>{
   return `<iframe src="https://widgets.glenn.pub/widgets/${name}" style="border:1px solid #EAEAEB;width:300px;height:200px;overflow:hidden"/>`
 }
