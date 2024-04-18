@@ -10,7 +10,7 @@ const todayWeekNum = Math.floor(today.dayOfYear() / (365 / 50) )
 
 <template>
   <div class="h-full">
-    <div class="flex justify-between px-3 " >
+    <div class="flex justify-between px-3 pt-1" >
       <div>
         {{today.year()}}
       </div>

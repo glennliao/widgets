@@ -8,6 +8,13 @@ const widgetList = ref([
     name: 'yearWeek',
     title: 'yearWeek',
     description: '一周是一年的2%',
+    tips:"",
+  },
+  {
+    name: 'hitokoto',
+    title: '一言',
+    description: '',
+    tips:"",
   }
 ])
 </script>
@@ -24,11 +31,14 @@ const widgetList = ref([
             <h1>Welcome to Widget </h1>
             <ColorScheme><USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']" /></ColorScheme>
           </div>
+          <div>
+            小挂件
+          </div>
           <NuxtPage />
         </template>
       </UCard>
 
-      <div class="flex ">
+      <div class="flex flex-wrap" style="gap:16px">
         <template v-for="item in widgetList" :key="item.name">
           <UCard class="mt-10" >
             <template #header>
@@ -80,12 +90,15 @@ const widgetList = ref([
   background-image: url("https://www.dmoe.cc/random.php");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   filter: blur(1px);
 }
 
 .widget-container{
   width:300px;
   height: 200px;
+  border: 1px solid #EAEAEB;
+  box-sizing: border-box;
 }
 
 

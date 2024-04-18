@@ -1,13 +1,11 @@
 <script setup lang="ts">
 const route = useRoute()
 let { widget } = route.params
-const Widget = resolveComponent(widget as string)
-
 </script>
 
 <template>
   <div class="widget-page-container">
-    <component :is="Widget" />
+    <component :is="widget" />
   </div>
 </template>
 
